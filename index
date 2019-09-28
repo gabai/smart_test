@@ -20,7 +20,7 @@
       <div class="bounce3"></div>
     </div>
     <div id='holder' >
-      <h2>Example-SMART-App</h2>
+      <h2>Test - Rounding Tool</h2>
 
       <h2>Patient Resource</h2>
       <table>
@@ -50,12 +50,35 @@
         <tr>
           <th>Systolic Blood Pressure:</th>
           <td id='systolicbp'></td>
-
         </tr>
         <tr>
           <th>Diastolic Blood Pressure:</th>
           <td id='diastolicbp'></td>
         </tr>
+		<tr>
+			<th>Hemoglobin:</th>
+			<td id='hemoglobin'></td>
+		</tr>
+		<tr>
+          <th>Sodium:</th>
+          <td id='sodium'></td>
+        </tr>
+		<tr>
+			<th>Potassium:</th>
+			<td id='potassium'></td>
+		</tr>
+		<tr>
+			<th>Chloride:</th>
+			<td id='Chloride'></td>
+		</tr>
+		<tr>
+			<th>Calcium:</th>
+			<td id='calcium'></td>
+		</tr>
+		<tr>
+			<th>Creatinine:</th>
+			<td id='creatinine'></td>
+		</tr>
         <tr>
           <th>LDL:</th>
           <td id='ldl'></td>
