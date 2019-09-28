@@ -112,13 +112,13 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-	  hemoglobin: {value: ''},
+      hemoglobin: {value: ''},
       potassium: {value: ''},
-	  chloride: {value: ''},
-	  calcium: {value: ''},
-	  glucose: {value: ''},
-	  sodium: {value: ''},
-	  creatinine: {value: ''},
+      chloride: {value: ''},
+      calcium: {value: ''},
+      glucose: {value: ''},
+      sodium: {value: ''},
+      creatinine: {value: ''},
     };
   }
 
@@ -162,13 +162,13 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-	$('#hemoglobin').html(p.hemoglobin);
-	$('#potassium').html(p.potassium);
-	$('#chloride').html(p.chloride);
-	$('#calcium').html(p.calcium);
-	$('#glucose').html(p.glucose);
-	$('#sodium').html(p.sodium);
-	$('#creatinine').html(p.creatinine);
+    $('#hemoglobin').html(p.hemoglobin);
+    $('#potassium').html(p.potassium);
+    $('#chloride').html(p.chloride);
+    $('#calcium').html(p.calcium);
+    $('#glucose').html(p.glucose);
+    $('#sodium').html(p.sodium);
+    $('#creatinine').html(p.creatinine);
   };
 
 })(window);
