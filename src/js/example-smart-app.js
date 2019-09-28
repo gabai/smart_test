@@ -26,7 +26,7 @@
 			      'http://loinc.org|6298-4', 'http://loinc.org|2069-3', 'http://loinc.org|49765-1',
 			      'http://loinc.org|2339-0', 'http://loinc.org|2947-0', 'http://loinc.org|26464-8',
 			      'http://loinc.org|38483-4', 'http://loinc.org|718-7', 'http://loinc.org|26515-7',
-			      'http://loinc.org|3094-0', 'http://loinc.org|2028-9',
+			      'http://loinc.org|3094-0', 'http://loinc.org|2028-9', 'http://loinc.org|2951-2',
 			      //rounding labs
 			      'http://loinc.org|4548-4'
 			      // other labs a1c
