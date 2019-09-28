@@ -108,7 +108,7 @@ Other Labs
 	  var cl = byCodes('2069-3', '2075-0');
 	  var ca = byCodes('49765-1', '17861-6');
 	  var glu = byCodes('2339-0', '2345-7');
-	  var na = byCodes('2947-0', '2951-2');
+	  var na = byCodes('2947-0' | '2951-2');
 	  var cr = byCodes('38483-4');
 	  var bun = byCodes('3094-0');
 	  var co2 = byCodes('2028-9');
