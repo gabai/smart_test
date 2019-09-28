@@ -92,23 +92,37 @@ Other Labs
 
           var height = byCodes('8302-2');
 	  var weight = byCodes('29463-7');
+		
+	  var heart_rate = byCodes('8867-4');
+	  var respiratory_rate = byCodes('9279-1');
+	  var temperature = byCodes('8310-5');
+	  var oxygen_saturation = byCodes('2710-2');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
-          var hdl = byCodes('2085-9');
-          var ldl = byCodes('2089-1');
-	  var hemoglobin = byCodes('4548-4');
-	  var potassium = byCodes('6298-4');
-	  var chloride = byCodes('2069-3');
-	  var calcium = byCodes('49765-1');
-	  var glucose = byCodes('2339-0');
-	  var sodium = byCodes('2947-0');
+		
+          var wbc = byCodes('26464-8');
+	  var hgb = byCodes('718-7');
+	  var plt = byCodes('26515-7');
+	  var potassium = byCodes('6298-4','2823-3');
+	  var chloride = byCodes('2069-3', '2075-0');
+	  var calcium = byCodes('49765-1', '17861-6');
+	  var glucose = byCodes('2339-0', '2345-7');
+	  var sodium = byCodes('2947-0', '2951-2');
 	  var creatinine = byCodes('38483-4');
+	  var bun = byCodes('3094-0');
+	  var co2 = byCodes('2028-9');
+	
+	  var hdl = byCodes('2085-9');
+          var ldl = byCodes('2089-1');
+	  var a1c = byCodes('4548-4');
+	  
 		  
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
+		
           p.height = getQuantityValueAndUnit(height[0]);
 	  p.weight = getQuantityValueAndUnit(weight[0]);
 
