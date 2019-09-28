@@ -93,22 +93,23 @@ Other Labs
           var height = byCodes('8302-2');
 	  var weight = byCodes('29463-7');
 		
-	  var heart_rate = byCodes('8867-4');
-	  var respiratory_rate = byCodes('9279-1');
-	  var temperature = byCodes('8310-5');
-	  var oxygen_saturation = byCodes('2710-2');
-          var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
-          var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
+	  var hr = byCodes('8867-4');
+	  var rr = byCodes('9279-1');
+	  var temp = byCodes('8310-5');
+	  var o2 = byCodes('2710-2');
+          var sys = getBloodPressureValue(byCodes('55284-4'),'8480-6');
+          var dia = getBloodPressureValue(byCodes('55284-4'),'8462-4');
 		
           var wbc = byCodes('26464-8');
 	  var hgb = byCodes('718-7');
 	  var plt = byCodes('26515-7');
-	  var potassium = byCodes('6298-4','2823-3');
-	  var chloride = byCodes('2069-3', '2075-0');
-	  var calcium = byCodes('49765-1', '17861-6');
-	  var glucose = byCodes('2339-0', '2345-7');
-	  var sodium = byCodes('2947-0', '2951-2');
-	  var creatinine = byCodes('38483-4');
+		
+	  var k = byCodes('6298-4','2823-3');
+	  var cl = byCodes('2069-3', '2075-0');
+	  var ca = byCodes('49765-1', '17861-6');
+	  var glu = byCodes('2339-0', '2345-7');
+	  var na = byCodes('2947-0', '2951-2');
+	  var cr = byCodes('38483-4');
 	  var bun = byCodes('3094-0');
 	  var co2 = byCodes('2028-9');
 	
@@ -125,24 +126,36 @@ Other Labs
 		
           p.height = getQuantityValueAndUnit(height[0]);
 	  p.weight = getQuantityValueAndUnit(weight[0]);
+		
+	  p.hr = getQuantityValueAndUnit(hr[0]);
+	  p.rr = getQuantityValueAndUnit(rr[0]);
+	  p.temp = getQuantityValueAndUnit(temp[0]);
+	  p.o2 = getQuantityValueAndUnit(o2[0]);
 
-          if (typeof systolicbp != 'undefined')  {
-            p.systolicbp = systolicbp;
+          if (typeof sys != 'undefined')  {
+            p.sys = sys;
           }
 
-          if (typeof diastolicbp != 'undefined') {
-            p.diastolicbp = diastolicbp;
+          if (typeof dia != 'undefined') {
+            p.dia = dia;
           }
 
+ 	  p.wbc = getQuantityValueAndUnit(wbc[0]);
+	  p.plt = getQuantityValueAndUnit(plt[0]);
+	  p.hgb = getQuantityValueAndUnit(hgb[0]);
+		
+	  p.k = getQuantityValueAndUnit(k[0]);
+	  p.cl = getQuantityValueAndUnit(cl[0]);
+	  p.ca = getQuantityValueAndUnit(ca[0]);
+	  p.glu = getQuantityValueAndUnit(glu[0]);
+	  p.na = getQuantityValueAndUnit(na[0]);
+	  p.cr = getQuantityValueAndUnit(cr[0]);
+	  p.bun = getQuantityValueAndUnit(bun[0]);
+	  p.co2 = getQuantityValueAndUnit(co2[0]);
+		
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
-	  p.hemoglobin = getQuantityValueAndUnit(hemoglobin[0]);
-	  p.potassium = getQuantityValueAndUnit(potassium[0]);
-	  p.chloride = getQuantityValueAndUnit(chloride[0]);
-	  p.calcium = getQuantityValueAndUnit(calcium[0]);
-	  p.glucose = getQuantityValueAndUnit(glucose[0]);
-	  p.sodium = getQuantityValueAndUnit(sodium[0]);
-	  p.creatinine = getQuantityValueAndUnit(creatinine[0]);
+	  p.a1c = getQuantityValueAndUnit(a1c[0]);
 
           ret.resolve(p);
         });
@@ -162,19 +175,33 @@ Other Labs
       lname: {value: ''},
       gender: {value: ''},
       birthdate: {value: ''},
+	    
       height: {value: ''},
       weight: {value: ''},
-      systolicbp: {value: ''},
-      diastolicbp: {value: ''},
+	    
+      hr: {value: ''},
+      rr: {value: ''},
+      temp: {value: ''},
+      o2: {value: ''},
+      sys: {value: ''},
+      dia: {value: ''},
+	    
+      wbc: {value: ''},
+      hgb: {value: ''},
+      plt: {value: ''},
+	    
+      k: {value: ''},
+      cl: {value: ''},
+      ca: {value: ''},
+      glu: {value: ''},
+      na: {value: ''},
+      cr: {value: ''},
+      co2: {value: ''},
+      bun: {value: ''},
+	    
       ldl: {value: ''},
       hdl: {value: ''},
-      hemoglobin: {value: ''},
-      potassium: {value: ''},
-      chloride: {value: ''},
-      calcium: {value: ''},
-      glucose: {value: ''},
-      sodium: {value: ''},
-      creatinine: {value: ''},
+      a1c: {value: ''},
     };
   }
 
@@ -213,19 +240,34 @@ Other Labs
     $('#lname').html(p.lname);
     $('#gender').html(p.gender);
     $('#birthdate').html(p.birthdate);
+	  
     $('#height').html(p.height);
     $('#weight').html(p.weight);
-    $('#systolicbp').html(p.systolicbp);
-    $('#diastolicbp').html(p.diastolicbp);
+	
+    $('#hr').html(p.hr);
+    $('#rr').html(p.rr);
+    $('#temp').html(p.temp);
+    $('#o2').html(p.o2);
+    $('#sys').html(p.sys);
+    $('#dia').html(p.dia);
+    
+    $('#wbc').html(p.wbc);
+    $('#hgb').html(p.hgb);
+    $('#plt').html(p.plt);
+	  
+    $('#k').html(p.k);
+    $('#cl').html(p.cl);
+    $('#ca').html(p.ca);
+    $('#glu').html(p.glu);
+    $('#na').html(p.na);
+    $('#cr').html(p.cr);
+    $('#bun').html(p.bun);
+    $('#co2').html(p.co2);
+  
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-    $('#hemoglobin').html(p.hemoglobin);
-    $('#potassium').html(p.potassium);
-    $('#chloride').html(p.chloride);
-    $('#calcium').html(p.calcium);
-    $('#glucose').html(p.glucose);
-    $('#sodium').html(p.sodium);
-    $('#creatinine').html(p.creatinine);
+    $('#a1c').html(p.a1c);
+    
   };
 
 })(window);
