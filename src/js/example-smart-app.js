@@ -18,10 +18,10 @@
                         $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
-							  'http://loinc.org|4548-4', 'http://loinc.org|6298-4',
-							  'http://loinc.org|2069-3', 'http://loinc.org|49765-1',
-							  'http://loinc.org|2339-0', 'http://loinc.org|2947-0',
-							  'http://loinc.org|38483-4']
+			      'http://loinc.org|4548-4', 'http://loinc.org|6298-4',
+			      'http://loinc.org|2069-3', 'http://loinc.org|49765-1',
+			      'http://loinc.org|2339-0', 'http://loinc.org|2947-0',
+			      'http://loinc.org|38483-4']
                       }
                     }
                   });
@@ -56,13 +56,13 @@
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
-		  var hemoglobin = byCodes('4548-4');
-		  var potassium = byCodes('6298-4');
-		  var chloride = byCodes('2069-3');
-		  var calcium = byCodes('49765-1');
-		  var glucose = byCodes('2339-0');
-		  var sodium = byCodes('2947-0');
-		  var creatinine = byCodes('38483-4');
+	  var hemoglobin = byCodes('4548-4');
+	  var potassium = byCodes('6298-4');
+	  var chloride = byCodes('2069-3');
+	  var calcium = byCodes('49765-1');
+	  var glucose = byCodes('2339-0');
+	  var sodium = byCodes('2947-0');
+	  var creatinine = byCodes('38483-4');
 		  
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -81,13 +81,13 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
-		  p.hemoglobin = getQuantityValueAndUnit(hemoglobin[0]);
-		  p.potassium = getQuantityValueAndUnit(potassium[0]);
-		  p.chloride = getQuantityValueAndUnit(chloride[0]);
-		  p.calcium = getQuantityValueAndUnit(calcium[0]);
-		  p.glucose = getQuantityValueAndUnit(glucose[0]);
-		  p.sodium = getQuantityValueAndUnit(sodium[0]);
-		  p.creatinine = getQuantityValueAndUnit(creatinine[0]);
+	  p.hemoglobin = getQuantityValueAndUnit(hemoglobin[0]);
+	  p.potassium = getQuantityValueAndUnit(potassium[0]);
+	  p.chloride = getQuantityValueAndUnit(chloride[0]);
+	  p.calcium = getQuantityValueAndUnit(calcium[0]);
+	  p.glucose = getQuantityValueAndUnit(glucose[0]);
+	  p.sodium = getQuantityValueAndUnit(sodium[0]);
+	  p.creatinine = getQuantityValueAndUnit(creatinine[0]);
 
           ret.resolve(p);
         });
