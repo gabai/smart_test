@@ -27,7 +27,8 @@
 						'http://loinc.org|2823-3', 'http://loinc.org|2075-0', 'http://loinc.org|17861-6',
 						'http://loinc.org|2345-7', 'http://loinc.org|2951-2', 'http://loinc.org|26464-8',
 						'http://loinc.org|2160-0', 'http://loinc.org|718-7', 'http://loinc.org|26515-7',
-						'http://loinc.org|3094-0', 'http://loinc.org|2028-9', 'http://loinc.org|2951-2', //rounding labs
+						'http://loinc.org|3094-0', 'http://loinc.org|2028-9', 'http://loinc.org|2951-2',
+						'http://loinc.org|38483-4', //rounding labs
 						
 						'http://loinc.org|4548-4'] //other labs (a1c)
                       }
@@ -165,7 +166,7 @@ Testing
 			var ca = byCodes('17861-6');
 			var glu = byCodes('2345-7');
 			var na = byCodes('2951-2');
-			var cr = byCodes('2160-0');
+			var cr = byCodes(['38483-4','2160-0']);
 			var bun = byCodes('3094-0');
 			var co2 = byCodes('2028-9');
 	
