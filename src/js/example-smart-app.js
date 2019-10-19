@@ -49,10 +49,24 @@
 				fname = patient.name[0].given.join(' ');
 				lname = patient.name[0].family.join(' ');
 			}
-
+			
+			var test_names = ['height', 'weight'];
+			var test_codes = ['8302-2', '3141-9'];
+			
+			[test_names, test_code].forEach(
+			function (a) {
+				[0, 1].forEach(
+				  function (i) {
+					var [a] = [i];
+				  }
+				);
+			  }
+			);
+			
+/*
 			var height = byCodes('8302-2');
 			var weight = byCodes('3141-9');
-		
+*/		
 			var hr = byCodes('8867-4');
 			var rr = byCodes('9279-1');
 			var temp = byCodes('8310-5');
