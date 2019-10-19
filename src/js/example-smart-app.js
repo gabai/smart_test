@@ -16,7 +16,7 @@
                     type: 'Observation',
                     query: {
                       code: {
-                        $or: ['http://loinc.org|8302-2', 'http://loinc.org|29463-7', //height and weight
+                        $or: ['http://loinc.org|8302-2', 'http://loinc.org|3141-9', //height and weight
 						
 						'http://loinc.org|8462-4', 'http://loinc.org|8480-6', 'http://loinc.org|55284-4',
 						'http://loinc.org|9279-1', 'http://loinc.org|8310-5', 'http://loinc.org| 8867-4',
@@ -24,8 +24,8 @@
 						
 						'http://loinc.org|2085-9', 'http://loinc.org|2089-1', //cholesterol, ldl
 						
-						'http://loinc.org|6298-4', 'http://loinc.org|2075-0', 'http://loinc.org|17861-6',
-						'http://loinc.org|2345-7', 'http://loinc.org|2951-2', 'http://loinc.org|6690-2',
+						'http://loinc.org|2823-3', 'http://loinc.org|2075-0', 'http://loinc.org|17861-6',
+						'http://loinc.org|2345-7', 'http://loinc.org|2951-2', 'http://loinc.org|26464-8',
 						'http://loinc.org|2160-0', 'http://loinc.org|718-7', 'http://loinc.org|26515-7',
 						'http://loinc.org|3094-0', 'http://loinc.org|2028-9', 'http://loinc.org|2951-2', //rounding labs
 						
@@ -37,8 +37,8 @@
 /* 	
 Vitals
 * 8302-2 Height
-* 29463-7 Weight
-	3141-9 weight
+  29463-7 Weight
+	*3141-9 weight
 * 9279-1 respiratory_rate
 * 8310-5 temperature
 	8480-6 Systolic blood pressure
@@ -47,12 +47,12 @@ Vitals
 * 2710-2 oxygen_saturation
 
 Rounding labs (* in use)
-  26464-8 WBC # Bld
-	*6690-2 WBC
+* 26464-8 WBC # Bld
+	6690-2 WBC
 * 718-7 Hgb bld-mcnc (confirmed)
 * 26515-7 Platelet # Bld
-* 6298-4 Potassium
-	2823-3 Potassium SerPl-sCnc
+  6298-4 Potassium
+	*2823-3 Potassium SerPl-sCnc
   2069-3 Chloride
 	*2075-0 Chloride SerPl-sCnc (Confirmed)
   49765-1 Calcium 
@@ -147,7 +147,7 @@ Testing
 			}
 
 			var height = byCodes('8302-2');
-			var weight = byCodes('29463-7');
+			var weight = byCodes('3141-9');
 		
 			var hr = byCodes('8867-4');
 			var rr = byCodes('9279-1');
@@ -156,12 +156,12 @@ Testing
 			var sys = getBloodPressureValue(byCodes('55284-4'),'8480-6');
 			var dia = getBloodPressureValue(byCodes('55284-4'),'8462-4');
 		
-			var wbc = byCodes('6690-2');
+			var wbc = byCodes('26464-8');
 			var hgb = byCodes('718-7');
 			var plt = byCodes('26515-7');
 		
-			var k = byCodes(['6298-4','2823-3']);
-			var cl = byCodes(['2075-0']);
+			var k = byCodes('2823-3');
+			var cl = byCodes('2075-0');
 			var ca = byCodes('17861-6');
 			var glu = byCodes('2345-7');
 			var na = byCodes('2951-2');
