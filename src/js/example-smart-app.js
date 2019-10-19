@@ -24,9 +24,9 @@
 						
 						'http://loinc.org|2085-9', 'http://loinc.org|2089-1', //cholesterol, ldl
 						
-						'http://loinc.org|6298-4', 'http://loinc.org|2069-3', 'http://loinc.org|49765-1',
-						'http://loinc.org|2339-0', 'http://loinc.org|2947-0', 'http://loinc.org|26464-8',
-						'http://loinc.org|38483-4', 'http://loinc.org|718-7', 'http://loinc.org|26515-7',
+						'http://loinc.org|6298-4', 'http://loinc.org|2075-0', 'http://loinc.org|17861-6',
+						'http://loinc.org|2345-7', 'http://loinc.org|2951-2', 'http://loinc.org|6690-2',
+						'http://loinc.org|2160-0', 'http://loinc.org|718-7', 'http://loinc.org|26515-7',
 						'http://loinc.org|3094-0', 'http://loinc.org|2028-9', 'http://loinc.org|2951-2', //rounding labs
 						
 						'http://loinc.org|4548-4'] //other labs (a1c)
@@ -47,30 +47,88 @@ Vitals
 * 2710-2 oxygen_saturation
 
 Rounding labs (* in use)
-* 26464-8 WBC # Bld
-* 718-7 Hgb bld-mcnc
+  26464-8 WBC # Bld
+	*6690-2 WBC
+* 718-7 Hgb bld-mcnc (confirmed)
 * 26515-7 Platelet # Bld
 * 6298-4 Potassium
 	2823-3 Potassium SerPl-sCnc
-* 2069-3 Chloride
-	2075-0 Chloride SerPl-sCnc
-* 49765-1 Calcium 
-	17861-6 Calcium SerPl-mCnc
-* 2339-0 Glucose
-	2345-7 Glucose SerPl-mCnc
-* 2947-0 Sodium
-	2951-2 Sodium SerPl-sCnc
-* 38483-4 Creatinine
-	2160-0 Creat SerPl-mCnc
-* 3094-0 BUN SerPl-mCnc
+  2069-3 Chloride
+	*2075-0 Chloride SerPl-sCnc (Confirmed)
+  49765-1 Calcium 
+	*17861-6 Calcium SerPl-mCnc (confirmed)
+  2339-0 Glucose
+	*2345-7 Glucose SerPl-mCnc (confirmed)
+  2947-0 Sodium
+	*2951-2 Sodium SerPl-sCnc (confirmed)
+  38483-4 Creatinine
+	*2160-0 Creat SerPl-mCnc (confirmed)
+* 3094-0 BUN SerPl-mCnc (confirmed)
 * 2028-9 CO2 SerPl-sCnc
 
 Other Labs
 * 4548-4 Hemoglobin a1c
-	1742-6 ALT SerPl-cCnc
+	1742-6 ALT SerPl-cCnc (confirmed)
 	789-8 RBC # Bld Auto
 	11580-8 TSH SerPl DL<=0.005 mU/L-aCnc
-	10466-1 Anion Gap3 SerPl-sCnc
+	10466-1 Anion Gap3 SerPl-sCnc (confirmed)
+	
+Testing
+1742-6	ALT
+1920-8	AST
+1751-7	Albumin Level
+6768-6	Alkaline Phosphatase
+6697-7	Amylase Level
+10466-1	Anion Gap
+1968-7	Bilirubin Direct
+1971-1	Bilirubin Indirect
+2093-3	Cholesterol
+2085-9	Cholesterol HDL
+13457-7	Cholesterol LDL (Calculated)
+18262-6	Cholesterol LDL (Direct)
+9830-1	Cholesterol/ HDL Ratio
+2160-0	Creatinine
+2276-4	Ferritin
+2284-8	Folate Level
+48642-3	GFR
+48643-1	GFR AfrAmer
+2324-2	GGT
+1504-0	Glucose 1H Post 50 G
+1521-4	Glucose 2H PP
+1521-4	Glucose 2H PP
+32016-8	Glucose Bld Glucometer
+2345-7	Glucose Fasting
+2345-7	Glucose Level
+2339-0	Glucose WB
+4544-3	Hct
+31100-1	Hematocrit Venous Bld, Calculated
+4548-4	Hemoglobin A1c
+34660-1	Hemoglobin A2
+785-6	MCH
+786-4	MCHC
+787-2	MCV
+738-5	Macrocytes
+2601-3	Magnesium Level
+741-9	Microcytes
+742-7	Mono Abs
+749-2	Myelocyte
+751-8	Neut Abs
+21418-9	Neutrophil Ab
+770-8	Neutrophils
+43396-1	Non-HDL Cholesterol (Calculated)
+2692-2	Osmolality
+2695-5	Osmolality Ur
+2777-1	Phosphate
+777-3	Platelet
+2823-3	Potassium Level
+2885-2	Protein
+789-8	RBC
+18309-5	RBC Nuc
+788-0	RDW
+17849-1	Reticulocyte Count
+768-2	Segs
+
+
 */
 
 
@@ -98,16 +156,16 @@ Other Labs
 			var sys = getBloodPressureValue(byCodes('55284-4'),'8480-6');
 			var dia = getBloodPressureValue(byCodes('55284-4'),'8462-4');
 		
-			var wbc = byCodes('26464-8');
+			var wbc = byCodes('6690-2');
 			var hgb = byCodes('718-7');
 			var plt = byCodes('26515-7');
 		
 			var k = byCodes(['6298-4','2823-3']);
-			var cl = byCodes(['2069-3', '2075-0']);
-			var ca = byCodes('49765-1', '17861-6');
-			var glu = byCodes('2339-0', '2345-7');
-			var na = byCodes(['2947-0', '2951-2']);
-			var cr = byCodes('38483-4');
+			var cl = byCodes(['2075-0']);
+			var ca = byCodes('17861-6');
+			var glu = byCodes('2345-7');
+			var na = byCodes('2951-2');
+			var cr = byCodes('2160-0');
 			var bun = byCodes('3094-0');
 			var co2 = byCodes('2028-9');
 	
