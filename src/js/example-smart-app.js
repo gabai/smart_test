@@ -166,7 +166,7 @@ Testing
 			var ca = byCodes('17861-6');
 			var glu = byCodes('2345-7');
 			var na = byCodes('2951-2');
-			var cr = byCodes(['38483-4','2160-0']);
+			var cr = byCodes(('38483-4'),'2160-0');
 			var bun = byCodes('3094-0');
 			var co2 = byCodes('2028-9');
 	
