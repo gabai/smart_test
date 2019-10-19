@@ -50,9 +50,15 @@
 				lname = patient.name[0].family.join(' ');
 			}
 			
-			var test_names = ['height', 'weight'];
-			var test_codes = ['8302-2', '3141-9'];
-			
+			String test_names = ['height', 'weight'];
+			String test_codes = ['8302-2', '3141-9'];
+
+			for (String i=0; i<test_names.lenght; i++){
+				for (int j=0; a<test_codes.lenght; j++){
+				var [i] = [j];
+				}
+			}
+/*			
 			[test_names, test_code].forEach(
 			function (a) {
 				[0, 1].forEach(
@@ -62,7 +68,7 @@
 				);
 			  }
 			);
-			
+*/			
 /*
 			var height = byCodes('8302-2');
 			var weight = byCodes('3141-9');
