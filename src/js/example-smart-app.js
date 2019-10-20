@@ -60,7 +60,7 @@
 			var sys = getBloodPressureValue(byCodes('55284-4'),'8480-6');
 			var dia = getBloodPressureValue(byCodes('55284-4'),'8462-4');
 		
-			var wbc = byCodes('26464-8');
+			var wbc = (byCodes('26464-8'),'6690-2');
 			var hgb = byCodes('718-7');
 			var plt = byCodes('26515-7');
 		
