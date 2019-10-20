@@ -59,8 +59,6 @@
 				var [i] = [j];
 				}
 			}
-*/
-/*			
 			[test_names, test_code].forEach(
 			function (a) {
 				[0, 1].forEach(
