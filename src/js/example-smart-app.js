@@ -49,7 +49,8 @@
 				fname = patient.name[0].given.join(' ');
 				lname = patient.name[0].family.join(' ');
 			}
-			
+
+/*			
 			String test_names = ['height', 'weight'];
 			String test_codes = ['8302-2', '3141-9'];
 
@@ -58,6 +59,7 @@
 				var [i] = [j];
 				}
 			}
+*/
 /*			
 			[test_names, test_code].forEach(
 			function (a) {
@@ -69,10 +71,10 @@
 			  }
 			);
 */			
-/*
+
 			var height = byCodes('8302-2');
 			var weight = byCodes('3141-9');
-*/		
+
 			var hr = byCodes('8867-4');
 			var rr = byCodes('9279-1');
 			var temp = byCodes('8310-5');
