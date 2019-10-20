@@ -50,26 +50,6 @@
 				lname = patient.name[0].family.join(' ');
 			}
 
-/*			
-			String test_names = ['height', 'weight'];
-			String test_codes = ['8302-2', '3141-9'];
-
-			for (String i=0; i<test_names.lenght; i++){
-				for (int j=0; a<test_codes.lenght; j++){
-				var [i] = [j];
-				}
-			}
-			[test_names, test_code].forEach(
-			function (a) {
-				[0, 1].forEach(
-				  function (i) {
-					var [a] = [i];
-				  }
-				);
-			  }
-			);
-*/			
-
 			var height = byCodes('8302-2');
 			var weight = byCodes('3141-9');
 
@@ -89,7 +69,7 @@
 			var ca = byCodes('17861-6');
 			var glu = byCodes('2345-7');
 			var na = byCodes('2951-2');
-			var cr = byCodes(('38483-4'),'2160-0');
+			var cr = byCodes('2160-0');
 			var bun = byCodes('3094-0');
 			var co2 = byCodes('2028-9');
 	
